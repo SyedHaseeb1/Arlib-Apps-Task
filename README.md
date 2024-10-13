@@ -28,7 +28,7 @@ This Android application provides users with essential information regarding med
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/SyedHaseeb1/Arlib-Apps-Task.git](https://github.com/SyedHaseeb1/Arlib-Apps-Task.git)
+    git clone https://github.com/SyedHaseeb1/Arlib-Apps-Task.git
     ```
 2.  **Open the Project:**
     Open the project in Android Studio.
