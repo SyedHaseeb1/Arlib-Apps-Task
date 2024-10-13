@@ -3,19 +3,21 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt") // For Hilt and annotation processing
     id("dagger.hilt.android.plugin") // Hilt plugin
+    kotlin("plugin.serialization") version "1.9.25"
+    kotlin("kapt") // Required for annotation processing
 }
 
 android {
-    namespace = "com.hsb.composesplash"
+    namespace = "com.hsb.task"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.hsb.composesplash"
+        applicationId = "com.hsb.arlib.task"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        setProperty("archivesBaseName", "Arlib_Apps_(Task_Syed_Haseeb)")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,6 +28,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            resValue("string", "API_BASE_URL", "https://pastebin.com")
         }
     }
     compileOptions {
@@ -37,6 +40,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.15" // Check for the latest version
@@ -51,7 +55,9 @@ dependencies {
     // Compose UI
     implementation("androidx.compose.ui:ui:1.7.3") // Compose UI
     implementation("androidx.compose.material3:material3:1.3.0") // Material3
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3") // Tooling for preview
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3")
+    implementation("androidx.compose.runtime:runtime-livedata:1.7.3")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     debugImplementation("androidx.compose.ui:ui-tooling:1.7.3") // Debug tooling
 
     // Lifecycle & ViewModel
@@ -72,20 +78,34 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3") // Coroutines core
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3") // Coroutines Android
 
-    // Coil (for image loading)
-    implementation("io.coil-kt:coil-compose:2.4.0") // Coil for image loading
-
     // Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.8.2") // Navigation for Compose
 
     // Testing (Optional)
     testImplementation("junit:junit:4.13.2") // JUnit for testing
-    androidTestImplementation("androidx.test.ext:junit:1.2.1") // AndroidX JUnit
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1") // Espresso for UI testing
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.3") // Compose UI testing
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.3") // UI test manifest
+    testImplementation("org.mockito:mockito-core:4+")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4+")
+    testImplementation("androidx.test.ext:junit:1.2.1")
 
     //Extensions Utils
     implementation("com.github.syedhaseeb1:extensions_hsb:1.2.2")
 
+    //My FlexiRVAdapter
+    implementation("com.github.syedhaseeb1:FlexiRVAdapter:1.0.6")
+
+    //Retrofit and Utils
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi:1.13.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+    // Room dependencies
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    // Optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:2.6.1")
 }

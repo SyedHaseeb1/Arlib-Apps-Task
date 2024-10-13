@@ -1,0 +1,139 @@
+{
+  "problems": [
+    {
+      "Diabetes": [
+        {
+          "medications": [
+            {
+              "medicationsClasses": [
+                {
+                  "className": [
+                    {
+                      "associatedDrug": [
+                        {
+                          "name": "Aspirin",
+                          "dose": "1",
+                          "strength": "500 mg"
+                        },
+                        {
+                          "name": "Metformin",
+                          "dose": "2",
+                          "strength": "850 mg"
+                        },
+                        {
+                          "name": "Gliclazide",
+                          "dose": "1",
+                          "strength": "80 mg"
+                        }
+                      ],
+                      "associatedDrug#2": [
+                        {
+                          "name": "Insulin Glargine",
+                          "dose": "1",
+                          "strength": "100 units/ml"
+                        },
+                        {
+                          "name": "Glipizide",
+                          "dose": "1",
+                          "strength": "5 mg"
+                        }
+                      ]
+                    }
+                  ],
+                  "className2": [
+                    {
+                      "associatedDrug": [
+                        {
+                          "name": "Dapagliflozin",
+                          "dose": "1",
+                          "strength": "10 mg"
+                        }
+                      ],
+                      "associatedDrug#2": [
+                        {
+                          "name": "Liraglutide",
+                          "dose": "1",
+                          "strength": "0.6 mg"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "labs": [
+            {
+              "name": "Blood Glucose Level",
+              "value": "7.5 mmol/L",
+              "normalRange": "4.0 - 6.0 mmol/L"
+            },
+            {
+              "name": "HbA1c",
+              "value": "8.2%",
+              "normalRange": "Less than 6.5%"
+            }
+          ]
+        }
+      ],
+      "Asthma": [
+        {
+          "medications": [
+            {
+              "medicationsClasses": [
+                {
+                  "className": [
+                    {
+                      "associatedDrug": [
+                        {
+                          "name": "Albuterol",
+                          "dose": "2",
+                          "strength": "90 mcg"
+                        },
+                        {
+                          "name": "Budesonide",
+                          "dose": "1",
+                          "strength": "200 mcg"
+                        }
+                      ],
+                      "associatedDrug#2": [
+                        {
+                          "name": "Montelukast",
+                          "dose": "1",
+                          "strength": "10 mg"
+                        }
+                      ]
+                    }
+                  ],
+                  "className2": [
+                    {
+                      "associatedDrug": [
+                        {
+                          "name": "Fluticasone",
+                          "dose": "1",
+                          "strength": "250 mcg"
+                        }
+                      ],
+                      "associatedDrug#2": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "labs": [
+            {
+              "name": "Peak Expiratory Flow Rate",
+              "value": "400 L/min",
+              "normalRange": "400 - 600 L/min"
+            },
+            {
+              "name": "Allergy Testing",
+              "result": "Positive for dust mites"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
