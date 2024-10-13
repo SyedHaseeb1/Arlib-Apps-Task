@@ -28,13 +28,13 @@ This Android application provides users with essential information regarding med
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/medical-info-app.git](https://github.com/your-username/medical-info-app.git)
+    git clone [https://github.com/SyedHaseeb1/Arlib-Apps-Task.git](https://github.com/SyedHaseeb1/Arlib-Apps-Task.git)
     ```
 2.  **Open the Project:**
     Open the project in Android Studio.
 3.  **Run the App:**
     Build and run the app on an emulator or physical device.
-    [Download TEST APK](https://github.com/SyedHaseeb1/Arlib-Apps-Task/sample_apk/Arlib_Apps_(Task_Syed_Haseeb)-debug.apk).
+    [Download TEST APK](https://github.com/SyedHaseeb1/Arlib-Apps-Task/blob/main/sample_apk/Arlib_Apps_(Task_Syed_Haseeb)-debug.apk).
 
 ##
 
